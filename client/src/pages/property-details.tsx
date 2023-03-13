@@ -74,13 +74,22 @@ const PropertyDetails = () => {
                 mt="20px"
                 display="flex"
                 flexDirection={{ xs: "column", lg: "row" }}
+                justifyContent="space-between"
                 gap={4}
             >
+                <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    width="fit-content"
+                    flexDirection={{ xs: "column", lg: "row" }}
+                    gap={5}
+                >
                 <Box flex={1} maxWidth={764}>
                     <img
                         src={propertyDetails.photo}
                         alt="property_details-img"
                         height={546}
+                        width="100%"
                         style={{ objectFit: "cover", borderRadius: "10px" }}
                         className="property_details-img"
                     />
@@ -305,6 +314,7 @@ const PropertyDetails = () => {
 
                     <Stack>
                         <img
+                            alt="img"
                             src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
                             width="100%"
                             height={306}
@@ -321,6 +331,9 @@ const PropertyDetails = () => {
                         />
                     </Box>
                 </Box>
+                </Box>  
+
+
             </Box>
         </Box>
     );

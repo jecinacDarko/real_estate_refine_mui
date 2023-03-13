@@ -29,6 +29,7 @@ const AllProperties = () => {
     } = useTable();
 
     const allProperties = data?.data ?? [];
+
     const currentPrice = sorter.find((item) => item.field === "price")?.order;
 
     const toggleSort = (field: string) => {
