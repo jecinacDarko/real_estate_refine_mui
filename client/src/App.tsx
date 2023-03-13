@@ -1,6 +1,6 @@
 import React from "react";
 
-import { GitHubBanner, Refine, AuthProvider } from "@pankod/refine-core";
+import { Refine, AuthProvider } from "@pankod/refine-core";
 import {
     notificationProvider,
     RefineSnackbarProvider,
@@ -58,7 +58,7 @@ function App() {
 
             if (profileObj) {
                 const response = await fetch(
-                    "http://localhost:8080/api/v1/users",
+                    "https://refine-dashboard-brr2.onrender.com/api/v1/users",
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
@@ -127,9 +127,8 @@ function App() {
             <CssBaseline />
             <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
             <RefineSnackbarProvider>
-                <GitHubBanner />
                 <Refine
-                    dataProvider={dataProvider("http://localhost:8080/api/v1")}
+                    dataProvider={dataProvider("https://refine-dashboard-brr2.onrender.com")}
                     notificationProvider={notificationProvider}
                     ReadyPage={ReadyPage}
                     catchAll={<ErrorComponent />}
